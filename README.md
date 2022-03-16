@@ -1,5 +1,7 @@
 # Reverse Engineering
 
+https://github.com/Bob74/Reverse/wiki
+
 ## <img src='https://user-images.githubusercontent.com/9498543/158698861-bb935775-2024-4839-b2b1-5a617e677bfb.png' width='18'> Français
 Les choses qui sont notées ici ne sont pas des vérités absolues mais ma compréhension et mon interprétation à partir des compétences que j'ai acquis au file des années.  
 Si vous êtes expert dans un des domaines évoqués et que vous relevez des informations erronées ou incomplètes, n'hésitez pas à ouvrir un ticket Issue, c'est toujours un plaisir d'en apprendre plus sur les subtilités de l'informatique 🙂
