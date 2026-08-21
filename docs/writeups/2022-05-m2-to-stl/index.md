@@ -1,3 +1,7 @@
+
+<img src="./medias/m2_stl.png" style="height: 300px"/>
+
+
 # Conversion d'un modèle .M2 vers .STL
 
 Conversion d'un modèle 3D issu du jeu World of Warcraft vers un format imprimable en 3D.

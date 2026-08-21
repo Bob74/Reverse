@@ -3,11 +3,11 @@
 layout: home
 
 hero:
-  name: "Les carnets du voyageur numérique"
+  name: "Carnets d'exploration numérique"
   tagline: "“L'informatique, personne n'y comprend jamais rien.”"
   image:
     src: medias/logo.png
-    alt: Carnets du voyageur numérique
+    alt: Carnets d'exploration numérique
 
 features:
   - icon: ✍️

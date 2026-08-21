@@ -11,6 +11,9 @@ importers:
       vitepress:
         specifier: 2.0.0-alpha.19
         version: 2.0.0-alpha.19(postcss@8.5.26)
+      vitepress-plugin-image-preview:
+        specifier: ^0.1.6
+        version: 0.1.6(vitepress@2.0.0-alpha.19(postcss@8.5.26))(vue@3.5.41)
 
 packages:
 
@@ -373,6 +376,9 @@ packages:
   html-void-elements@3.0.0:
     resolution: {integrity: sha512-bEqo66MRXsUGxWHV5IP0PUiAWwoEjba4VCzg0LjFJBpchPaTfyfCKTG6bc5F8ucKec3q5y6qOdGyYTSBEvhCrg==}
 
+  javascript-stringify@2.1.0:
+    resolution: {integrity: sha512-JVAfqNPTvNq3sB/VHQJAFxN/sPgKnsKrCwyRt15zwNCdrMMJDdcEOdubuy+DuJYYdm0ox1J4uzEuYKkN+9yhVg==}
+
   lightningcss-android-arm64@1.33.0:
     resolution: {integrity: sha512-gEpRTalKdosp4Bb8qWtc2iOgE5SeIHlpS1up9bFq2wAyYhl1UdTObYiHe98zEM9SQvSoqQZ1IQD0JNpg3Ml5pg==}
     engines: {node: '>= 12.0.0'}
@@ -603,6 +609,11 @@ packages:
         optional: true
       yaml:
         optional: true
+
+  vitepress-plugin-image-preview@0.1.6:
+    resolution: {integrity: sha512-z0hd9KOW21CsIcI/Fs4qQ520QFJpEyT4BsKY1BDt5sU/OAfHfn5hmR8MZqjtjdB+blXMSvTO5L7EuXmPNHtRvw==}
+    peerDependencies:
+      vitepress: ^1.0.0-0 || ^2.0.0-0
 
   vitepress@2.0.0-alpha.19:
     resolution: {integrity: sha512-WnBsb0Bwr43kXKyiis+lld/7ri3hnMbthS8N3hpFtjjwsdLO4IRmiAE08D7aud4q6oMDf9uwRowxzNqRFe/amw==}
@@ -924,6 +935,8 @@ snapshots:
 
   html-void-elements@3.0.0: {}
 
+  javascript-stringify@2.1.0: {}
+
   lightningcss-android-arm64@1.33.0:
     optional: true
 
@@ -1136,6 +1149,14 @@ snapshots:
       tinyglobby: 0.2.17
     optionalDependencies:
       fsevents: 2.3.3
+
+  vitepress-plugin-image-preview@0.1.6(vitepress@2.0.0-alpha.19(postcss@8.5.26))(vue@3.5.41):
+    dependencies:
+      '@vueuse/core': 14.4.0(vue@3.5.41)
+      javascript-stringify: 2.1.0
+      vitepress: 2.0.0-alpha.19(postcss@8.5.26)
+    transitivePeerDependencies:
+      - vue
 
   vitepress@2.0.0-alpha.19(postcss@8.5.26):
     dependencies:

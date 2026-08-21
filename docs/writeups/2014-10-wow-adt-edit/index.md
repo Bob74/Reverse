@@ -9,6 +9,7 @@ description: Modifier le relief du terrain depuis la mémoire du jeu pour voir s
 Cette revue est écrite bien des années après sa réalisation, il me manque donc beaucoup d'éléments comme la démarche exacte et tous les logiciels utilisés à l'époque.
 :::
 
+<img src="./medias/flatten.png" style="height: 300px"/>
 
 ## Contexte
 

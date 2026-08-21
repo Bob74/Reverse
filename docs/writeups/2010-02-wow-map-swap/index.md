@@ -9,6 +9,8 @@ description: Faire charger une autre carte du monde que celle où notre joueur s
 Cette revue est écrite bien des années après sa réalisation. Le logiciel `WPE Pro` utilisé ici n'est absolument plus fonctionnel sur les versions récentes de Windows et je n'ai pas pensé à faire de captures du logiciel à l'époque pour montrer ce que je faisais exactement.
 :::
 
+<img src="./medias/bit_swap.png" style="height: 300px"/>
+
 ## Contexte
 
 - Date : Février 2010
