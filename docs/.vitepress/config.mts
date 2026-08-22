@@ -5,8 +5,8 @@ import { ImagePreviewPlugin } from 'vitepress-plugin-image-preview'
 export default defineConfig({
   // Nom du dépôt Github
   base: '/Reverse/',
-  lang: 'fr-FR',
-  title: "Carnets d'exploration numérique",
+  lang: 'fr',
+  title: "Carnets d'Explo. Numérique",
   description: "Notes, expériences et writeups pour comprendre les programmes, un octet à la fois.",
   cleanUrls: true,
   lastUpdated: true,
@@ -15,7 +15,20 @@ export default defineConfig({
     lastUpdated: {
       text: 'Dernière mise à jour '
     },
-    
+    docFooter: {
+      prev: 'Page précédente',
+      next: 'Page suivante'
+    },
+    outline: {
+      label: 'Sommaire'
+    },
+    langMenuLabel: 'Changer de langue',
+    returnToTopLabel: 'Retour en haut de page',
+    sidebarMenuLabel: 'Menu',
+    darkModeSwitchLabel: 'Apparence',
+    lightModeSwitchTitle: 'Passer au thème clair',
+    darkModeSwitchTitle: 'Passer au thème sombre',
+  
     nav: [
       { text: 'Accueil', link: '/' }
     ],
@@ -46,5 +59,15 @@ export default defineConfig({
         }
       )
     ]
-  }
+  },
+  markdown: {
+    container: {
+      tipLabel: 'ℹ️ Note',
+      dangerLabel: '⚠️ Attention !'
+    },
+    codeCopyButton: {
+      tooltipText: 'Copier le code',
+      copiedText: 'Copié'
+    }
+  },
 })

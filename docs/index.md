@@ -3,11 +3,11 @@
 layout: home
 
 hero:
-  name: "Carnets d'exploration numérique"
+  name: "Carnets d'Exploration Numérique"
   tagline: "“L'informatique, personne n'y comprend jamais rien.”"
   image:
     src: medias/logo.png
-    alt: Carnets d'exploration numérique
+    alt: Carnets d'Exploration Numérique
 
 features:
   - icon: ✍️

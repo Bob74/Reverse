@@ -48,7 +48,7 @@ Maintenant on va commencer la partie rébarbative. On va dans les options et on 
 
 ![Slider de FOV en jeu](medias/tlou-fov-slider.png)
 
-::: danger ⚠️ Attention !
+::: danger
 Le FOV ne s'applique réellement qu'après être revenu en jeu, il faudra donc :
 - Appliquer la modification
 - Revenir jusqu'en jeu (on voit le FOV changer à ce moment)
@@ -75,13 +75,13 @@ _Par exemple ici je n'avais trouvé que 4 variables alors qu'en cherchant par va
 
 A ce stade vous devriez avoir une valeur (et donc une adresse) qui permet de modifier le FOV.
 
-::: tip ℹ️ Note
+::: tip
 Si vous pouvez modifier le FOV mais qu'il revient à la normale dès que vous quittez le menu, c'est normal. On verra ça un peu plus tard. Considérez que si visuellement le FOV bouge, c'est la bonne adresse.
 :::
 
 ### 3. Génération de la pointermap
 
-Pour retrouver la valeur même après avoir quitté le jeu, on va utiliser [les pointeurs](../../fondamentaux/pointers/index.md) (mais ceux là sont sympas). On va commencer par demander à Cheat Engine de générer une map des pointeurs que l'on pourra utiliser ensuite.
+Pour retrouver la valeur même après avoir quitté le jeu, on va utiliser [les pointeurs](../../fondamentaux/pointers/) (mais ceux là sont sympas). On va commencer par demander à Cheat Engine de générer une map des pointeurs que l'on pourra utiliser ensuite.
 
 ![Génération de la pointermap](medias/ce-pointermap.png)
 
@@ -89,7 +89,7 @@ Donnez le nom que vous voulez au fichier, assurez-vous juste d'être capable de 
 
 Patientez quelques minutes le temps que la génération se termine (la fenêtre de génération va se fermer toute seule).
 
-::: danger ⚠️ Attention !
+::: danger
 La génération cette map va **temporairement** prendre plusieurs giga-octets (~5 Go) sur votre disque, assurez-vous d'avoir de la place pendant la génération. Après ça, la carte en elle même ne pèsera qu'une centaine de Mo.
 :::
 
@@ -111,7 +111,7 @@ On indique un fichier pour enregistrer le résultat du scan et c'est parti !
 
 Alors... il y a du monde.
 
-Si vous avez suivi les petits rappels sur [les pointeurs](../../fondamentaux/pointers/index.md), vous devriez vous dire qu'un objet aussi important que la caméra ne devrait pas se trouver très très loin dans le code.
+Si vous avez suivi les petits rappels sur [les pointeurs](../../fondamentaux/pointers/), vous devriez vous dire qu'un objet aussi important que la caméra ne devrait pas se trouver très très loin dans le code.
 Donc on va trier cette liste pour avoir les résultats avec le moins de sauts (offset/pointeur) en premier. 
 Pour ça, on clique sur la dernière colonne d'offset :
 
@@ -129,7 +129,7 @@ Je vous conseille de vous limiter à ce lot d'adresses :
 
 ![Adresses à tester](medias/ce-pointer-scan-6.png)
 
-::: tip ℹ️ Note
+::: tip
 Si vous devez refaire un scan après avoir fermé le jeu, vous **devrez refaire une pointer map** avant de relancer une recherche de pointeurs.
 :::
 
@@ -205,5 +205,5 @@ Dans ce cas-ci, trouver un pointeur valide aura été beaucoup plus simple que c
 
 ## Références
 
-- Les [pointeurs](../../fondamentaux/pointers/index.md)
+- Les [pointeurs](../../fondamentaux/pointers/)
 - Les [désassembleurs](../../méthodes/desassembler.md)
