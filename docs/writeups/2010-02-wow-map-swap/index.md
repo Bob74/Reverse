@@ -29,9 +29,9 @@ C'est le serveur qui stock les données du personnage, son apparence, son équip
 
 Il nous envoie ces informations à la connexion pour que notre client charge les bons modèles 3D, la bonne carte, etc.
 
-Donc logiquement, on doit pouvoir intercepter les paquets réseaux contenant ces données et les modifier avant que notre client ne les lises. De cette manière on doit pouvoir changer la carte sur laquelle on apparait.
+Donc logiquement, on doit pouvoir intercepter les paquets réseaux contenant ces données et les modifier avant que notre client ne les lises. De cette manière on doit pouvoir changer la carte sur laquelle on apparaît.
 
-Ça ne pourra être que visuel ! Tout ce qui est géré côté serveur (autres joueurs, NPC, objets avec intéractions, etc.) resteront ceux de la vraie carte. Mais déjà c'est cool.
+Ça ne pourra être que visuel ! Tout ce qui est géré côté serveur (autres joueurs, NPC, objets avec interactions, etc.) resteront ceux de la vraie carte. Mais déjà c'est cool.
 
 ::: tip Workflow de connexion simplifié
 1. (choix du personnage)
@@ -63,7 +63,7 @@ Il faut commencer par connaître l'ID de la carte sur laquelle on se trouve et l
 Le plus dur est de trouver l'emplacement de l'id de map dans les données du paquet. Pour le retrouver, je me suis connecté plusieurs fois avec mes personnages depuis plusieurs maps différentes et j'ai cherché l'id de la map dans les données de paquets. Les **Royaumes de l'Est** et **Kalimdor** sont de mauvais candidats car leurs id sont respectivement **0** et **1**, inutile de dire que c'est une valeur très répandue dans un paquet.
 Les id de l'**Outreterre** et de **Norfendre** sont plus spécifiques et font ressortir moins de paquets contenant ces valeurs. En continuant de chercher, on fini par comprendre quel paquet s'occupe d'envoyer l'id de la map et où se trouve la valeur pour la modifier.  
 
-Par chance, les données n'étaient pas chiffrée ! Si les données étaient chiffrées et devaient être déchiffrées par le client, je n'aurais rien pu faire car modifier 1 octet du paquet aurait fausser toute la chaîne, le rendant illisible par le jeu. Il aurait été nécessaire de déchiffrer les données et les rechiffrer derrière, sans connaître l'algo utilisé ni les clefs ni rien...
+Par chance, les données n'étaient pas chiffrée ! Si les données étaient chiffrées et devaient être déchiffrées par le client, je n'aurais rien pu faire car modifier 1 octet du paquet aurait fausser toute la chaîne, le rendant illisible par le jeu. Il aurait été nécessaire de déchiffrer les données et les re-chiffrer derrière, sans connaître l'algo utilisé ni les clefs ni rien...
 
 ### 3. Modification
 
@@ -71,7 +71,7 @@ Le personnage se trouve à Hurlevent (carte **Royaume de l'est**, id **0**) et l
 
 Les paquets sont compartimentés avec des tailles bien définies, on applique un filtre dans `WPE Pro` qui va écraser un octet précis par la valeur que l'on veut.
 
-C'est comme dire : "Ecrase moi le 12ème octet du paquet par la valeur **1**" (voir la section [Références](#references) pour plus d'informations sur l'édition de paquets)
+C'est comme dire : "Écrase moi le 12ème octet du paquet par la valeur **1**" (voir la section [Références](#references) pour plus d'informations sur l'édition de paquets)
 
 ## Résultat
 
@@ -86,7 +86,7 @@ On notera que notre jeu (client) nous affiche à Silithus car notre position ré
 
 ## Ce que j'en retiens
 
-Maintenant que j'y pense, j'aurais dû charger une map plus cool que Kalimdor. Comme le [Rêve d'émeraude](medias/PanoramiqueED.jpg){target="blank"} qui était inacessible aux joueurs...
+Maintenant que j'y pense, j'aurais dû charger une map plus cool que Kalimdor. Comme le [Rêve d'émeraude](medias/PanoramiqueED.jpg){target="blank"} qui était inaccessible aux joueurs...
 
 Après il fallait que les coordonnées de mon joueur collent avec les coordonnées de la carte de destination. Il ne faut pas que mes coordonnées X et Y soient en dehors de la carte cible et il ne faut pas non plus que la coordonnées Z soit sous la carte cible, sinon c'est la mort assurée avec potentiellement une chute en boucle si le respawn est lui aussi sous la map cible.
 

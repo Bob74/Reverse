@@ -14,11 +14,11 @@ description: Comment obtenir un valeur persistante entre les sessions de jeu
 - Date : Août 2026
 - Programme : The last Of Us part 1
 - Version : 1.1.5.0
-- Outils utilisés : `Cheat Engine`
+- Outils utilisés : [Cheat Engine](../../outils/memory-editors/index.md)
 
 ## Objectif
 
-On veut être capables d'ajuster précisement le FOV dans the **Last Of Us part 1** et de conserver la valeur trouvée entre chaque sessions de jeu.
+On veut être capables d'ajuster précisément le FOV dans the **Last Of Us part 1** et de conserver la valeur trouvée entre chaque sessions de jeu.
 
 Le but serait d'arriver à conserver la variable entre les lancements en passant par les pointeurs.
 
@@ -165,7 +165,7 @@ On indique que l'on veut savoir qui écrit dans la valeur à l'adresse indiquée
 
 Pas besoin de faire tourner le scan très longtemps, on le tient le saligaud :
 
-![Ecriture du FOV en permanence](medias/ce-patch-3.png)
+![Écriture du FOV en permanence](medias/ce-patch-3.png)
 
 On affiche la vue [désassembleur](../../méthodes/desassembler.md) :
 
@@ -198,7 +198,7 @@ On a également pu patcher le code assembleur pour empêcher le jeu d'écraser l
 ###  Limites
 
 - Le travail de recherche de pointeur sera certainement à refaire de 0 en cas de mise à jour du jeu
-- On a de la chance que le code assembleur de mise à jour soit une mise à jour du FOV uniquement et pas d'autres valeurs. Auquel cas nous n'aurions pas pu simplement remplacer l'instruction par `nop`, il aurait sans doute fallu remonter la chaine d'instructions et casser l'appel vers cette fonction.
+- On a de la chance que le code assembleur de mise à jour soit une mise à jour du FOV uniquement et pas d'autres valeurs. Auquel cas nous n'aurions pas pu simplement remplacer l'instruction par `nop`, il aurait sans doute fallu remonter la chaîne d'instructions et casser l'appel vers cette fonction.
 
 ## Ce que j'en retiens
 

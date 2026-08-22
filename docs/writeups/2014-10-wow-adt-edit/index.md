@@ -16,7 +16,7 @@ Cette revue est écrite bien des années après sa réalisation, il me manque do
 - Date : Octobre 2014
 - Programme : Wow (serveur officiel)
 - Version : 5.5.1
-- Outils utilisés : `Cheat Engine`, `extracteur d'archives MPQ`
+- Outils utilisés : [Cheat Engine](../../outils/memory-editors/index.md), `extracteur d'archives MPQ`
 
 ## Objectif
 
