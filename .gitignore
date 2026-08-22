@@ -1,4 +1,5 @@
 _res/
+.vscode/
 
 # pnpm
 node_modules

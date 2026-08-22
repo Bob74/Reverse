@@ -184,9 +184,10 @@ Elle nous montre le code du jeu (code assembleur interprété par le processeur)
 
 Et voilà ! A partir de maintenant nous sommes les seuls à écrire dans cette variable.
 
-![FOV 160](medias/final.png)
-
 ## Résultat
+
+![FOV 160](medias/final.png)
+__Test avec le FOV à 160__
 
 ### Ce qui a fonctionné
 

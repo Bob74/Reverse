@@ -86,7 +86,7 @@ On notera que notre jeu (client) nous affiche à Silithus car notre position ré
 
 ## Ce que j'en retiens
 
-Maintenant que j'y pense, j'aurais dû charger une map plus cool que Kalimdor. Comme le rêve d'émeraude qui était inacessible aux joueurs...
+Maintenant que j'y pense, j'aurais dû charger une map plus cool que Kalimdor. Comme le [Rêve d'émeraude](medias/PanoramiqueED.jpg){target="blank"} qui était inacessible aux joueurs...
 
 Après il fallait que les coordonnées de mon joueur collent avec les coordonnées de la carte de destination. Il ne faut pas que mes coordonnées X et Y soient en dehors de la carte cible et il ne faut pas non plus que la coordonnées Z soit sous la carte cible, sinon c'est la mort assurée avec potentiellement une chute en boucle si le respawn est lui aussi sous la map cible.
 
