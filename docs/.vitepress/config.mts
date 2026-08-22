@@ -3,6 +3,8 @@ import { ImagePreviewPlugin } from 'vitepress-plugin-image-preview'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  // Nom du dépôt Github
+  base: '/Reverse/',
   lang: 'fr-FR',
   title: "Carnets d'exploration numérique",
   description: "Notes, expériences et writeups pour comprendre les programmes, un octet à la fois.",
@@ -15,16 +17,17 @@ export default defineConfig({
     },
     
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Accueil', link: '/' }
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Catégories',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'Writeups', link: '/writeups/' },
+          { text: 'Outils', link: '/outils/' },
+          { text: 'Méthodes', link: '/méthodes/' },
+          { text: 'Rappels fondamentaux', link: '/fondamentaux/' },
         ]
       }
     ],
