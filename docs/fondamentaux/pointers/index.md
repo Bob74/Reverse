@@ -149,7 +149,7 @@ struct Camera {
 :::
 
 
-# Pourquoi ça permet de retrouver sa variable même après avoir fermé le programme
+## Pourquoi ça permet de retrouver sa variable même après avoir fermé le programme
 
 Pour plusieurs raisons, beaucoup de données du jeu vont complètement changer d'adresses mémoire à chaque lancement. **Toutes** ? Non ! Des variables particulières (globales, statiques, en singleton, etc.) peuvent reprendre la même adresse à chaque chargement. Et ces variables vont devenir notre point d'entrée vers les valeurs qui nous intéressent réellement.
 
