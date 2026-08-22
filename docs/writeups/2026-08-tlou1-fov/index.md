@@ -102,7 +102,7 @@ Cette fois-ci on lance la recherche de pointeurs sur l'adresse voulue :
 On fourni la pointermap créée juste avant à la recherche :
 
 ![Pointerscan options](medias/ce-pointer-scan-2.png)
-__J'ai peut être des options différentes mais ça devrait fonctionner avec les options par défaut.__
+_J'ai peut être des options différentes mais ça devrait fonctionner avec les options par défaut._
 
 
 On indique un fichier pour enregistrer le résultat du scan et c'est parti !
@@ -187,7 +187,7 @@ Et voilà ! A partir de maintenant nous sommes les seuls à écrire dans cette v
 ## Résultat
 
 ![FOV 160](medias/final.png)
-__Test avec le FOV à 160__
+_Test avec le FOV à 160_
 
 ### Ce qui a fonctionné
 
