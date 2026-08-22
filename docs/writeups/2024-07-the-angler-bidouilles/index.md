@@ -69,11 +69,16 @@ Je ne sais pas encore si ces zones servaient juste à tester les modèles (ça m
 
 ![Playground - Jeeps](medias/playground-jeeps.jpg)
 
+![Playground - Boats](medias/playground-boats.jpg)
+
 ![Playground - Clothes](medias/playground-clothes.jpg)
 _Fun fact : sur ce genre de plateforme j'ai pu voir en avant première les reposes cannes qui ont été introduits quelques mois plus tard en jeu, wow !_
 
 ![Playground - Buildings ](medias/playground-buildings.jpg)
 _Ceux là sont clairement des bâtiments de test ou qui n'ont jamais été terminé._
+
+![Playground - Cross](medias/playground-cross.jpg)
+_Il faudrait que je retourne voir cette croix maintenant que le jeu a officiellement été stoppé._
 
 ![Playground](medias/playground-flying-2.jpg)
 ![Playground](medias/playground-flying.jpg)
@@ -84,6 +89,9 @@ _oui, c'est un ferry qui vole. Le plus étonnant étant que cette carte n'a pas 
 :::
 
 ::: info Autres curiosités
+![Playground - Other map](medias/playground-other-map.jpg)
+_Les autres cartes aussi ont eu droit à leurs zones de tests._
+
 ![Flying boat](medias/flying%20boat.png)
 _Mon bateau s'est envolé, tout droit sur l'axe Z, après que j'ai joué avec les valeurs d'aérodynamisme_ 🤷‍♂️
 
