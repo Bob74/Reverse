@@ -5,7 +5,7 @@ description: Comment obtenir un valeur persistante entre les sessions de jeu
 
 <img src="./assets/fov.png" style="height: 300px"/>
 
-> "De quoi prendre la grosse tête"
+> "De quoi prendre la grosse tête."
 
 # Modification du FOV dans The Last Of Us part 1 (avec pointeurs)
 

@@ -80,6 +80,9 @@ _Ceux là sont clairement des bâtiments de test ou qui n'ont jamais été termi
 ![Playground - Cross](assets/playground-cross.jpg)
 _Il faudrait que je retourne voir cette croix maintenant que le jeu a officiellement été stoppé._
 
+![Playground - Cross 2026](assets/playground-cross-2026.jpg)
+_Update Août 2026 : et bien non, pas de changement_ 😕
+
 ![Playground](assets/playground-flying-2.jpg)
 ![Playground](assets/playground-flying.jpg)
 _Vues d'ensemble_
@@ -93,9 +96,10 @@ _Oui, c'est un ferry qui vole. Le plus étonnant étant que cette carte n'a pas 
 _Les autres cartes aussi ont eu droit à leurs zones de tests._
 
 ![Flying boat](assets/flying%20boat.png)
-_Mon bateau s'est envolé, tout droit sur l'axe Z, après que j'ai joué avec les valeurs d'aérodynamisme_ 🤷‍♂️
+_Mon bateau s'est envolé, tout droit à la verticale, après que j'ai joué avec les valeurs d'aérodynamisme_ 🤷‍♂️
 
 ![Outbound](assets/outbound.png)
+![Outbound view](assets/outbound-view.jpg)
 _De très beaux paysages même en dehors de la map._
 
 ![End of the map](assets/end-of-map.jpg)
