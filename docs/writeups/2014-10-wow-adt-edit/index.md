@@ -11,6 +11,8 @@ Cette revue est écrite bien des années après sa réalisation, il me manque do
 
 <img src="./medias/flatten.png" style="height: 300px"/>
 
+> "🎵 Ça plane pour moi..."
+
 ## Contexte
 
 - Date : Octobre 2014

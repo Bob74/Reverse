@@ -11,6 +11,8 @@ Cette revue est écrite bien des années après sa réalisation. Le logiciel `WP
 
 <img src="./medias/bit_swap.png" style="height: 300px"/>
 
+> "Et si je fous ça là, ça fait quoi ?"
+
 ## Contexte
 
 - Date : Février 2010

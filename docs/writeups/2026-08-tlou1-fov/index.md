@@ -5,9 +5,9 @@ description: Comment obtenir un valeur persistante entre les sessions de jeu
 
 <img src="./medias/fov.png" style="height: 300px"/>
 
-# Modification du FOV dans The Last Of Us part 1 (avec pointeurs)
+> "De quoi prendre la grosse tête"
 
-> On lance le jeu, on démarre Cheat Engine et c'est tipar !
+# Modification du FOV dans The Last Of Us part 1 (avec pointeurs)
 
 ## Contexte
 
@@ -21,6 +21,9 @@ description: Comment obtenir un valeur persistante entre les sessions de jeu
 On veut être capables d'ajuster précisément le FOV dans the **Last Of Us part 1** et de conserver la valeur trouvée entre chaque sessions de jeu.
 
 Le but serait d'arriver à conserver la variable entre les lancements en passant par les pointeurs.
+
+Alors on lance le jeu, on démarre Cheat Engine et c'est tipar !
+
 
 ## Hypothèses initiales
 

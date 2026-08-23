@@ -85,7 +85,7 @@ _Il faudrait que je retourne voir cette croix maintenant que le jeu a officielle
 _Vues d'ensemble_
 
 ![Playground](medias/flying%20ship.jpg)
-_oui, c'est un ferry qui vole. Le plus étonnant étant que cette carte n'a pas ce genre de bateau, ni le train ni plusieurs autres modèles. Je pense que cette carte servait aussi de test pour les développeurs. C'est la toute première map sortie avec le jeu, celles qui ont suivies étaient des DLC._
+_Oui, c'est un ferry qui vole. Le plus étonnant étant que cette carte n'a pas ce genre de bateau, ni le train ni plusieurs autres modèles. Je pense que cette carte servait aussi de test pour les développeurs. C'est la toute première map sortie avec le jeu, celles qui ont suivies étaient des DLC._
 :::
 
 ::: info Autres curiosités

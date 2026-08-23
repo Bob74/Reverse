@@ -7,10 +7,10 @@ Je note ici les expériences que j'ai pu faire en essayant de détailler et d'ex
 ## Août 2026
 - [Modification du FOV dans **The Last Of Us part 1** (avec pointeurs)](./2026-08-tlou1-fov/)
 
-## Février 2026
+## Février 2026 <Badge type="warning" text="En cours d'écriture..." />
 - [Conversion d'un model .m2 de **World of Warcraft** en .stl (en mieux et avec l'impression 3D)](./2026-02-m2-to-stl-2/)
 
-## Juillet 2024
+## Juillet 2024 <Badge type="warning" text="En cours d'écriture..." />
 - [Bidouilles sur **Call of the Wild - The Angler**](./2024-07-the-angler-bidouilles/)
 
 ## Mai 2022
