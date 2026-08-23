@@ -9,7 +9,7 @@ description: Modifier le relief du terrain depuis la mémoire du jeu pour voir s
 Cette revue est écrite bien des années après sa réalisation, il me manque donc beaucoup d'éléments comme la démarche exacte et tous les logiciels utilisés à l'époque.
 :::
 
-<img src="./medias/flatten.png" style="height: 300px"/>
+<img src="./assets/flatten.png" style="height: 300px"/>
 
 > "🎵 Ça plane pour moi..."
 
@@ -45,7 +45,7 @@ Par contre je ne me souviens pas si j'ai modifié manuellement toutes les valeur
 
 ## Résultat
 
-![image](medias/WoWScrnShot_061014_223848.jpg)
+![image](assets/WoWScrnShot_061014_223848.jpg)
 _Un chunk de fichier ADT (fichier contenant le terrain) dont chaque point a été mis à la même hauteur._
 
 ### Ce qui a fonctionné
@@ -65,3 +65,4 @@ Ce n'est pas parce que la donnée est chargée en mémoire que l'affichage va la
 ## Références
 
 - Documentation sur les fichiers ADT et ses composants : https://wowdev.wiki/ADT
+

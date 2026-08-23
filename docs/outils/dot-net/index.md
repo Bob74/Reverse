@@ -16,7 +16,7 @@ Très efficace pour lire un Assembly .Net, il reste la référence.
 - ✅ Supporte l'analyse des membres et fonctions pour voir où ils sont lus/écris/instanciés
 - ❌ Ne permet pas l'édition du code (il faut exporter, charger le projet dans Visual Studio, le modifier et le compiler)
 
-![ILSpy](medias/ilspy.png)
+![ILSpy](assets/ilspy.png)
 
 ## dnSpy
 
@@ -35,4 +35,5 @@ Interface un peu plus sympa que ILSpy mais son gros point fort est de permettre 
 - ✅ Supporte l'analyse des membres et fonctions pour voir où ils sont lus/écris/instanciés
 - ✅ Permet l'édition du code et l'enregistrement de l'assembly
 
-![dnSpy](medias/dnspy.png)
+![dnSpy](assets/dnspy.png)
+

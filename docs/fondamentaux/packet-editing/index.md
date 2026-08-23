@@ -18,8 +18,9 @@ Workflow d'un crack
 ## Paquets TCP
 La partie qui nous intéresse est la partie **Data** tout en bas car ce sont les données écrites par le processus émetteur que le processus destinataire va devoir lire et interpréter.  
 Il peut y avoir n'importe quelle donnée dans cette section suivant ce que le développeur a juger nécessaire d'échanger entre le client et le serveur.  
-![image](medias/packet-tcp.png)
+![image](assets/packet-tcp.png)
 
 ## Modification des paquets processus à la volée
 On modifie le contenu du paquet en remplaçant des octets dans les données au format hexadécimal (section **Data**). La ligne **SEARCH** indique la valeur à chercher dans un octet précis et la ligne **MODIFY** indique la valeur à écrire en remplacement :
-![image](medias/wpe-pro.png)
+![image](assets/wpe-pro.png)
+

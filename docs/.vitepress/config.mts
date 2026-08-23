@@ -39,7 +39,6 @@ export default defineConfig({
         items: [
           { text: 'Writeups', link: '/writeups/' },
           { text: 'Outils', link: '/outils/' },
-          { text: 'Méthodes', link: '/méthodes/' },
           { text: 'Rappels fondamentaux', link: '/fondamentaux/' },
         ]
       }

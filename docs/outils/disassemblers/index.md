@@ -7,7 +7,7 @@
 
 Permet de visualiser et patcher le code assembleur d'un programme. Son gros plus est la possibilité d'avoir une vue "pseudocode" en C qui peut aider à comprendre les instructions assembleurs.
 
-![image](medias/relyze-desktop.png)
+![image](assets/relyze-desktop.png)
 
 ## Debugger
 
@@ -18,4 +18,5 @@ Permet de lancer un programme et de visualiser son code assembleur, sa mémoire 
 
 Des plugins permettent d'exporter des patchs.
 
-![image](medias/x64dbg.png)
+![image](assets/x64dbg.png)
+

@@ -6,7 +6,7 @@ hero:
   name: "Carnets d'Exploration Numérique"
   tagline: "“L'informatique, personne n'y comprend jamais rien.”"
   image:
-    src: medias/logo.png
+    src: assets/logo.png
     alt: Carnets d'Exploration Numérique
 
 features:
@@ -22,15 +22,9 @@ features:
     link: /outils/
     linkText: Voir les outils
 
-  - icon: 🔬
-    title: Méthodes
-    details: Détail de différentes méthodes de reverse engineering.
-    link: /méthodes/
-    linkText: Voir les méthodes
-
   - icon: 👨‍🏫
     title: Rappels fondamentaux
-    details: Des notes générales sur des concepts utiles en informatique.
+    details: Des notes générales sur des concepts utiles en reverse engineering.
     link: /fondamentaux/
     linkText: Parcourir les notes
 ---
@@ -46,3 +40,4 @@ Il ne s'agit clairement pas d'un cours ni d'un guide complet : les articles peuv
 
 Les writeups décrivent principalement **une méthode qui a fonctionné dans un cas donné**, et non une procédure universelle. Ils font parfois appel à de vieux souvenirs, excusez le manque de détails dans certains d'entre eux.
 :::
+

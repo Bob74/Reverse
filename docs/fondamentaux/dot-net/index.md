@@ -11,7 +11,7 @@ Autrefois, le .Net ne s'installait que sur Windows mais Microsoft a changé son 
 Dans le cadre du reverse engineering, le .Net est une aubaine. De par sa nature de langage pré-compilé, il nous permet de lire son code intermédiaire IL (**Intermediate Language**) et de le convertir en un langage .Net comme le C# ou le VB.Net. Le **IL** est à comparer au langage Assembleur mais qui embarquerait suffisamment d'informations pour permettre de réécrire le code source. On retrouve, entre autres, le nom d'origine des variables et fonctions.
 
 Un exemple de code IL avec la correspondance C# notée en commentaire :
-![image](medias/dot-net-ilspy-code.png)
+![image](assets/dot-net-ilspy-code.png)
 
 
 
@@ -24,22 +24,22 @@ Si vous vous êtes déjà intéressé au .Net même de loin, vous vous êtes cer
 - .Net Standard : Spécification destinée à uniformiser le .Net Framework et le .Net Core. Le .Net (à partir de la version 5.0) n'est pas concerné par l'implémentation de cette spécification. Pour ne rien simplifier, cette spécification a également des numéros de versions de la 1.0 à 2.1 mais on va surtout retenir que c'est une norme et pas un framework à proprement parler.
 - Mono : Alternative open source et cross-plateform au **.Net Framework**. Très utilisé dans les moteurs de jeux-vidéos (ex : Unity, Godot). (presque entièrement) Compatible jusqu'à la version .Net Framework 4.7 début 2024.
 
-![image](medias/dot-net-history.png)
+![image](assets/dot-net-history.png)
 
 
 # Lecture / modifications définitives
 Les outils les plus simples à utiliser sont ceux qui proposent de lire et de patcher l'**Intermediate Language**. Pour simplifier la lecture, ces outils traduisent l'IL en C# ou VB. On peut ainsi lire le code du programme quasiment à l'identique de son code source et le patcher pour altérer son fonctionnement.
 
 Exemple avec un crack-me basic écrit en .Net Framework 4.5 ouvert dans **ILSpy** :
-![image](medias/dot-net-crack-me.png)
+![image](assets/dot-net-crack-me.png)
 
-![image](medias/dot-net-crack-me-ilspy.png)
+![image](assets/dot-net-crack-me-ilspy.png)
 
 Le vue du code nous permet de voir le code derrière le bouton "Valider". Si le texte de la boite de texte (TextBox1) est égal au texte flouté, on a entré le bon mot de passe.  
 Le texte est volontairement flouté car le site d'où vient le challenge interdit de donner les réponses.
 
 Le même exemple en utilisant **dnSpy** qui permet l'édition (patch) des programmes .Net :
-![image](medias/dot-net-crack-me-dnspy.png)
+![image](assets/dot-net-crack-me-dnspy.png)
 
 
 # Patch au lancement d'un programme .Net

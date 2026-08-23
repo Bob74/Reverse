@@ -11,7 +11,7 @@ Ainsi on sera capable via cette technique de réaliser des choses comme :
 
 # Mémoire et code assembleur
 
-Sur la partie modification de la logique du programme (comme pour ne pas perdre de munitions en tirant), on se rapproche beaucoup de ce que l'on fait en [désassemblant](https://github.com/Bob74/Reverse/wiki/D%C3%A9sassembler) un programme. On va modifier directement le code assembleur et altérer le fonctionnement du programme. C'est la base de fonctionnement de pas mal de cracks notamment, où on va bypasser le code effectuant la vérification de license.
+Sur la partie modification de la logique du programme (comme pour ne pas perdre de munitions en tirant), on se rapproche beaucoup de ce que l'on fait en [désassemblant](../../fondamentaux/desassembler/) un programme. On va modifier directement le code assembleur et altérer le fonctionnement du programme. C'est la base de fonctionnement de pas mal de cracks notamment, où on va bypasser le code effectuant la vérification de license.
 
 La grosse différence entre `désassembler` et `modifier en mémoire` est que l'on n'intervient pas au même moment dans la vie du programme. Désassembler va permettre de `patcher` le programme et d'avoir un fonctionnement définitif dès son lancement (très pratique pour le partager). Modifier en mémoire va charger le programme `intact` en mémoire, puis appliquer les modifications.
 

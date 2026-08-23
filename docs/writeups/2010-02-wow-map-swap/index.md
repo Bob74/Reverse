@@ -9,7 +9,7 @@ description: Faire charger une autre carte du monde que celle où notre joueur s
 Cette revue est écrite bien des années après sa réalisation. Le logiciel `WPE Pro` utilisé ici n'est absolument plus fonctionnel sur les versions récentes de Windows et je n'ai pas pensé à faire de captures du logiciel à l'époque pour montrer ce que je faisais exactement.
 :::
 
-<img src="./medias/bit_swap.png" style="height: 300px"/>
+<img src="./assets/bit_swap.png" style="height: 300px"/>
 
 > "Et si je fous ça là, ça fait quoi ?"
 
@@ -80,20 +80,21 @@ C'est comme dire : "Écrase moi le 12ème octet du paquet par la valeur **1**" (
 On se retrouve donc sur la carte demandée mais avec les objets serveurs des **Royaumes de l'Est** (panneaux, chaises, caisses, joueurs, pnj, etc) car le serveur sait que l'on est là bas, et la carte de **Kalimdor** chargée sur notre client.
 Il y a une disparité entre ce que le client croit et ce que le serveur sait et nous envoie.
 
-![WoWScrnShot_021710_012425](medias/WoWScrnShot_021710_012425.jpg)
-![WoWScrnShot_021710_012430](medias/WoWScrnShot_021710_012430.jpg)
-![WoWScrnShot_021710_013153](medias/WoWScrnShot_021710_013153.jpg)
+![WoWScrnShot_021710_012425](assets/WoWScrnShot_021710_012425.jpg)
+![WoWScrnShot_021710_012430](assets/WoWScrnShot_021710_012430.jpg)
+![WoWScrnShot_021710_013153](assets/WoWScrnShot_021710_013153.jpg)
 
 On notera que notre jeu (client) nous affiche à Silithus car notre position réelle (à Hurlevent) se trouve aux même coordonnées que Silithus.
 
 ## Ce que j'en retiens
 
-Maintenant que j'y pense, j'aurais dû charger une map plus cool que Kalimdor. Comme le [Rêve d'émeraude](medias/PanoramiqueED.jpg){target="blank"} qui était inaccessible aux joueurs...
+Maintenant que j'y pense, j'aurais dû charger une map plus cool que Kalimdor. Comme le [Rêve d'émeraude](assets/PanoramiqueED.jpg){target="blank"} qui était inaccessible aux joueurs...
 
 Après il fallait que les coordonnées de mon joueur collent avec les coordonnées de la carte de destination. Il ne faut pas que mes coordonnées X et Y soient en dehors de la carte cible et il ne faut pas non plus que la coordonnées Z soit sous la carte cible, sinon c'est la mort assurée avec potentiellement une chute en boucle si le respawn est lui aussi sous la map cible.
 
 ## Références
 
-- Petite explication théorique sur le packet editing : [Packet Editing](../../méthodes/packet-editing.md)
+- Petite explication théorique sur le packet editing : [Packet Editing](../../fondamentaux/packet-editing/)
 - Liste exhaustive des maps et leurs ID : https://wowpedia.fandom.com/wiki/InstanceID
+
 

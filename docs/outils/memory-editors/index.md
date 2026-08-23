@@ -10,7 +10,7 @@ Forum : https://forum.cheatengine.org/
 Le plus connu et le plus polyvalent. Permet de rechercher des valeurs en mémoire, de debugger le code assembleur et de le patcher en direct.
 :::
 
-![Cheat Engine](medias/cheat-engine.png)
+![Cheat Engine](assets/cheat-engine.png)
 
 
 ## ReClass.NET
@@ -27,4 +27,5 @@ Propose des fonctionnalités similaires à Cheat Engine dont il reprend l'interf
 La mention `.NET` dans son nom fait référence au fait que c'est un fork réécrit en .Net. Ce programme fonctionne bien avec tous les processus Windows.
 :::
 
-![ReClass.Net](medias/reclass-net.png)
+![ReClass.Net](assets/reclass-net.png)
+

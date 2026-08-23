@@ -11,7 +11,7 @@ Ce n'est pas pour autant qu'un code compilé est une boite noire. Là où le ste
 # Désassembler
 Si on ne peut pas ramener le code compilé à son état d'origine, on peut tout de même visualiser ce que la compilation nous a laissé. Et pour ça on fait appel à un désassembleur. Son rôle est de reprendre le fichier compilé et de nous le traduire en une série d'instructions assembleurs (ils font bien plus que ça en réalité mais passons).
 
-![image](medias/relyze-desktop.png)  
+![image](assets/relyze-desktop.png)  
 _(Exemple d'une partie de programme désassemblé dans **Relyze Desktop**)_
 
 Ici, on parle directement au processeur en utilisant les jeux d'instruction qu'il comprend. C'est beaucoup moins lisible qu'un langage de plus haut niveau mais ça peut dépanner.
@@ -34,3 +34,4 @@ _AutoIt3, Python, ..._
 Ces langages de scripting ne sont pas compilés mais exécutés par leur interpréteur.
 
 Lorsque l'on créé un fichier exe autonome avec un de ces langages, l'interpréteur est en réalité packagé dans le fichier exe avec le code source et l'exécution du fichier exe va lancer l'interpréteur qui va lire le script embarqué.
+

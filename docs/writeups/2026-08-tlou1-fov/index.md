@@ -3,7 +3,7 @@ title: Modification du FOV dans The Last Of Us part 1 (avec pointeurs)
 description: Comment obtenir un valeur persistante entre les sessions de jeu
 ---
 
-<img src="./medias/fov.png" style="height: 300px"/>
+<img src="./assets/fov.png" style="height: 300px"/>
 
 > "De quoi prendre la grosse tête"
 
@@ -43,13 +43,13 @@ On va faire une recherche classique de valeur dans Cheat Engine :
 - Il y a de grandes chances que le FOV soit un `float` pour avoir un minimum de flexibilité (pouvoir avoir 75.5 de FOV par exemple). Il y a peu de chances que ce soit un `double` car ça serait ridiculement précis pour le besoin
 - Le FOV est certainement plus grand que 0.0
 
-![Paramètres de recherche Cheat Engine](medias/ce-search-1.png)
+![Paramètres de recherche Cheat Engine](assets/ce-search-1.png)
 
 Je fais une seconde passe en enlevant tout ce qui est plus grand que 1000 (je me laisse un peu de marge car on ne sait pas réellement ce que le jeu utilise comme valeur pour son FOV, c'est peut être une autre unité que les °)
 
 Maintenant on va commencer la partie rébarbative. On va dans les options et on modifie le slider de FOV.
 
-![Slider de FOV en jeu](medias/tlou-fov-slider.png)
+![Slider de FOV en jeu](assets/tlou-fov-slider.png)
 
 ::: danger
 Le FOV ne s'applique réellement qu'après être revenu en jeu, il faudra donc :
@@ -61,18 +61,18 @@ Le FOV ne s'applique réellement qu'après être revenu en jeu, il faudra donc :
 
 A un moment vous commencerez à trouver des valeurs qui fleurent bon le FOV :
 
-![Valeurs prometteuses](medias/ce-search-2.png)
+![Valeurs prometteuses](assets/ce-search-2.png)
 
 Quand vous commencez à ne plus avoir beaucoup de valeurs possibles (je dirais < 100), vous pouvez vous permettre de toutes les ajouter à votre liste d'adresses, les trier par valeurs et supprimer toutes celles qui ne vous intéressent pas :
 
-![Tris des valeurs](medias/ce-search-3.png)
+![Tris des valeurs](assets/ce-search-3.png)
 
 Testez ensuite de modifier les valeurs de chaque adresses restantes pour trouver celle qui agit réellement sur le FOV. **Testez des valeurs cohérentes (par exemple entre 60 et 120) pour éviter un crash du jeu et avoir à tout refaire !**
 
 ::: warning Si aucune valeur ne fonctionne
 Peut être avez-vous dégagé la bonne valeur au cours de votre recherche (ça m'est arrivé plusieurs fois, je penche pour un de mes filtrages un peu agressif...). Si vous avez au moins une valeur qui correspond au FOV, même si vous ne pouvez pas la modifier, servez-vous en pour faire une **nouvelle recherche** par `Exact value`, ça sera beaucoup plus rapide cette fois-ci car vous aurez juste à chercher la même valeur que la variable trouvée précédemment.
 
-![Recherche par valeur exacte](medias/ce-search-3.5.png)
+![Recherche par valeur exacte](assets/ce-search-3.5.png)
 _Par exemple ici je n'avais trouvé que 4 variables alors qu'en cherchant par valeur j'en ai 6_
 :::
 
@@ -86,7 +86,7 @@ Si vous pouvez modifier le FOV mais qu'il revient à la normale dès que vous qu
 
 Pour retrouver la valeur même après avoir quitté le jeu, on va utiliser [les pointeurs](../../fondamentaux/pointers/) (mais ceux là sont sympas). On va commencer par demander à Cheat Engine de générer une map des pointeurs que l'on pourra utiliser ensuite.
 
-![Génération de la pointermap](medias/ce-pointermap.png)
+![Génération de la pointermap](assets/ce-pointermap.png)
 
 Donnez le nom que vous voulez au fichier, assurez-vous juste d'être capable de le retrouver pour l'étape suivante.
 
@@ -100,17 +100,17 @@ La génération cette map va **temporairement** prendre plusieurs giga-octets (~
 
 Cette fois-ci on lance la recherche de pointeurs sur l'adresse voulue :
 
-![Recherche de pointeurs](medias/ce-pointer-scan-1.png)
+![Recherche de pointeurs](assets/ce-pointer-scan-1.png)
 
 On fourni la pointermap créée juste avant à la recherche :
 
-![Pointerscan options](medias/ce-pointer-scan-2.png)
+![Pointerscan options](assets/ce-pointer-scan-2.png)
 _J'ai peut être des options différentes mais ça devrait fonctionner avec les options par défaut._
 
 
 On indique un fichier pour enregistrer le résultat du scan et c'est parti !
 
-![Pointerscan résultats](medias/ce-pointer-scan-3.png)
+![Pointerscan résultats](assets/ce-pointer-scan-3.png)
 
 Alors... il y a du monde.
 
@@ -118,11 +118,11 @@ Si vous avez suivi les petits rappels sur [les pointeurs](../../fondamentaux/poi
 Donc on va trier cette liste pour avoir les résultats avec le moins de sauts (offset/pointeur) en premier. 
 Pour ça, on clique sur la dernière colonne d'offset :
 
-![Tris des résultats](medias/ce-pointer-scan-4.png)
+![Tris des résultats](assets/ce-pointer-scan-4.png)
 
 Ça va prendre plusieurs minutes pour trier mais ça vaut la peine d'attendre...
 
-![Résultats triés](medias/ce-pointer-scan-5.png)
+![Résultats triés](assets/ce-pointer-scan-5.png)
 
 Là c'est BEAUCOUP mieux et ça fait beaucoup moins peur.
 
@@ -130,7 +130,7 @@ On va juste récupérer toutes les valeurs qui ont le moins d'offsets possibles 
 
 Je vous conseille de vous limiter à ce lot d'adresses :
 
-![Adresses à tester](medias/ce-pointer-scan-6.png)
+![Adresses à tester](assets/ce-pointer-scan-6.png)
 
 ::: tip
 Si vous devez refaire un scan après avoir fermé le jeu, vous **devrez refaire une pointer map** avant de relancer une recherche de pointeurs.
@@ -138,7 +138,7 @@ Si vous devez refaire un scan après avoir fermé le jeu, vous **devrez refaire 
 
 Maintenant qu'on a notre liste d'adresse avec pointeurs, on serre les doigts, on croise les fesses et on relance le jeu.
 
-![Les survivantes](medias/ce-pointer-test.png)
+![Les survivantes](assets/ce-pointer-test.png)
 
 On voit que dans la bataille, deux adresses ont survécus, et on est heureux ☺️
 
@@ -154,29 +154,29 @@ On peut ruser en empêcher le jeu de réécrire la variable.
 
 Pour ça on va chercher qui écrit dans la variable :
 
-![Trouver qui écrit à cette adresse](medias/ce-patch-1.png)
+![Trouver qui écrit à cette adresse](assets/ce-patch-1.png)
 
 On accepte d'attacher le debugger de Cheat Engine au processus.
 
 ::: info
 Si vous avez déjà trouvé votre pointer, une fenêtre supplémentaire va s'afficher :
 
-![Qui écrit au contenu du pointeur](medias/ce-patch-2.png)
+![Qui écrit au contenu du pointeur](assets/ce-patch-2.png)
 
 On indique que l'on veut savoir qui écrit dans la valeur à l'adresse indiquée par le pointeur (et non pas qui écrit le pointeur en lui même).
 :::
 
 Pas besoin de faire tourner le scan très longtemps, on le tient le saligaud :
 
-![Écriture du FOV en permanence](medias/ce-patch-3.png)
+![Écriture du FOV en permanence](assets/ce-patch-3.png)
 
-On affiche la vue [désassembleur](../../méthodes/desassembler.md) :
+On affiche la vue [désassembleur](../../fondamentaux/desassembler/) :
 
-![Désassembleur](medias/ce-patch-4.png)
+![Désassembleur](assets/ce-patch-4.png)
 
 La fenêtre qui s'affiche nous montre le code assembleur et a déjà pré-sélectionné notre coupable. On va le rendre inoffensif en remplaçant son code par du code qui ne fait rien. Il y a justement une instruction assembleur pour ça : `nop` (code hexa 0x90) :
 
-![NOP NOP NOP NOP](medias/ce-patch-5.png)
+![NOP NOP NOP NOP](assets/ce-patch-5.png)
 
 ::: tip ℹ️ La vue désassembleur
 Elle nous montre le code du jeu (code assembleur interprété par le processeur). Ici on peut :
@@ -189,7 +189,7 @@ Et voilà ! A partir de maintenant nous sommes les seuls à écrire dans cette v
 
 ## Résultat
 
-![FOV 160](medias/final.png)
+![FOV 160](assets/final.png)
 _Test avec le FOV à 160_
 
 ### Ce qui a fonctionné
@@ -210,4 +210,5 @@ Dans ce cas-ci, trouver un pointeur valide aura été beaucoup plus simple que c
 ## Références
 
 - Les [pointeurs](../../fondamentaux/pointers/)
-- Les [désassembleurs](../../méthodes/desassembler.md)
+- Les [désassembleurs](../../fondamentaux/desassembler/)
+
