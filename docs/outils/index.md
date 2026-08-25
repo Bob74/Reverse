@@ -1,4 +1,4 @@
-# Outils
+# 🛠️ Outils
 
 ::: info [Memory Editors](./memory-editors/)
 Les outils qui nous permettent de lire et modifier la mémoire des programmes. Spoiler : Cheat Engine est déjà tellement génial qu'il est souvent la solution à tout faire de toute manière.

@@ -1,4 +1,4 @@
-# Writeups
+# 📓 Carnets
 
 ::: info
 Je note ici les expériences que j'ai pu faire en essayant de détailler et d'expliquer au mieux comment j'ai procédé. Parfois c'est compliqué, je ne pense pas à noter les choses sur le moment donc il peut manquer pas mal d'infos...

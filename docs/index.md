@@ -10,11 +10,11 @@ hero:
     alt: Carnets d'Exploration Numérique
 
 features:
-  - icon: ✍️
-    title: Writeups
+  - icon: 📓
+    title: Carnets
     details: Des retours d’expérience sur des problèmes rencontrés et les approches utilisées.
-    link: /writeups/
-    linkText: Lire les writeups
+    link: /carnets/
+    linkText: Consulter les carnets
 
   - icon: 🛠️
     title: Outils utiles
@@ -38,6 +38,6 @@ J'y documente mes expérimentations de reverse engineering, mes découvertes, le
 
 Il ne s'agit clairement pas d'un cours ni d'un guide complet : les articles peuvent être incomplets, spécifiques à un contexte ou nécessiter des connaissances préalables. Mais qui sait, ça peut peut-être aider quelqu'un au passage !
 
-Les writeups décrivent principalement **une méthode qui a fonctionné dans un cas donné**, et non une procédure universelle. Ils font parfois appel à de vieux souvenirs, excusez le manque de détails dans certains d'entre eux.
+Les [Carnets](/carnets/) décrivent principalement **une méthode qui a fonctionné dans un cas donné**, et non une procédure universelle. Ils font parfois appel à de vieux souvenirs, excusez le manque de détails dans certains d'entre eux.
 :::
 

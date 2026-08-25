@@ -7,7 +7,7 @@ export default defineConfig({
   base: '/Reverse/',
   lang: 'fr',
   title: "Carnets d'Explo. Numérique",
-  description: "Notes, expériences et writeups pour comprendre les programmes, un octet à la fois.",
+  description: "Notes et expériences pour comprendre les programmes, un octet à la fois.",
   cleanUrls: true,
   lastUpdated: true,
   themeConfig: {
@@ -20,7 +20,8 @@ export default defineConfig({
       next: 'Page suivante'
     },
     outline: {
-      label: 'Sommaire'
+      label: 'Sommaire',
+      level: [2, 4]
     },
     langMenuLabel: 'Changer de langue',
     returnToTopLabel: 'Retour en haut de page',
@@ -35,11 +36,11 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Catégories',
+        text: 'Index',
         items: [
-          { text: 'Writeups', link: '/writeups/' },
-          { text: 'Outils', link: '/outils/' },
-          { text: 'Rappels fondamentaux', link: '/fondamentaux/' },
+          { text: '📓 Carnets', link: '/carnets/' },
+          { text: '🛠️ Outils', link: '/outils/' },
+          { text: '👨‍🏫 Rappels fondamentaux', link: '/fondamentaux/' },
         ]
       }
     ],

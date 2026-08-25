@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@miletorix/vitepress-youtube-embed':
+        specifier: ^1.0.3
+        version: 1.0.3(vue@3.5.41)
     devDependencies:
       vitepress:
         specifier: 2.0.0-alpha.19
@@ -51,6 +55,11 @@ packages:
 
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
+
+  '@miletorix/vitepress-youtube-embed@1.0.3':
+    resolution: {integrity: sha512-y04iJoVG22zTbr7kfW4hpYX5yvh417yFQNpIBnYRMgPXCrU5T7v8bg6Xo+SMnPS1veEiWu/GVzuTnZX4fav8Ow==}
+    peerDependencies:
+      vue: ^3.0.0
 
   '@oxc-project/types@0.146.0':
     resolution: {integrity: sha512-XC0QsnnhVe7sLIWmYmdPw7x5P0h4W8vUU3Nv1ySgWXtvCz8NizoAEpGXA0sOYoJQV2Rl13LgURAHQ5cI5ILCSA==}
@@ -666,6 +675,10 @@ snapshots:
   '@iconify/types@2.0.0': {}
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
+
+  '@miletorix/vitepress-youtube-embed@1.0.3(vue@3.5.41)':
+    dependencies:
+      vue: 3.5.41
 
   '@oxc-project/types@0.146.0': {}
 
