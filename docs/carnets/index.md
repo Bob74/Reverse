@@ -4,8 +4,8 @@
 Je note ici les expériences que j'ai pu faire en essayant de détailler et d'expliquer au mieux comment j'ai procédé. Parfois c'est compliqué, je ne pense pas à noter les choses sur le moment donc il peut manquer pas mal d'infos...
 :::
 
-## Juillet 2024 (maj Août 2026) <Badge type="warning" text="En cours d'écriture..." />
-- [Bidouilles sur **Call of the Wild - The Angler**](./2024-07-the-angler-bidouilles/)
+## Juin 2024 (maj Août 2026) <Badge type="warning" text="En cours d'écriture..." />
+- [Bidouilles sur **Call of the Wild - The Angler**](./2024-06-the-angler-bidouilles/)
 
 ## Août 2026
 - [Modification du FOV dans **The Last Of Us part 1** (avec pointeurs)](./2026-08-tlou1-fov/)
