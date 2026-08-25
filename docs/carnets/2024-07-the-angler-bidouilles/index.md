@@ -222,14 +222,16 @@ La raison pour laquelle je voulais sortir de la map ! Bon au final ce n'est pas 
 <YouTubeEmbed video-id="iSU5b3zmXoc" />
 
 ![Test track](assets/test-track-below.jpg)
-_Vue de dessous, c'était l'occasion de voir comment modifier ma vélocité en saut pour pouvoir sauter dessus (modifier ma coordonnées Z n'était pas efficace sur ce jeu)._
+_Vue de dessous._
 
 ![Test track](assets/test-track.png)
 _Il y avait un spawner de véhicules comme on en trouve partout en jeu._
 :::
 
 ::: info Zone de test des objets
-Je ne sais pas encore si ces zones servaient juste à tester les modèles (ça m'étonnerait) ou si c'est une façon de les faire charger au jeu en une fois au chargement de la map et éviter les freeze si un modèle se ferait charger plus tard (par exemple un joueur qui spawn une voiture avec une couleur que l'on avait pas encore croisé). J'ai déjà vu ce système d'objets déjà créés en dehors de la map qui se retrouvent ensuite instanciés au besoin dans certains moteurs de jeux (oui je parle de toi Construct2) donc je penche plus pour un genre de cache.
+Je ne sais pas encore si ces zones servaient juste à tester les modèles ou si c'est une façon de les faire charger au jeu en une fois au chargement de la map et éviter les freeze si un modèle se ferait charger plus tard (par exemple un joueur qui spawn une voiture avec une couleur que l'on avait pas encore croisé). J'ai déjà vu ce système d'objets déjà créés en dehors de la map qui se retrouvent ensuite instanciés au besoin dans certains moteurs de jeux (oui je parle de toi Construct2).
+
+D'un autre côté les maps ont des éléments d'autres maps (le ferry ici, des éléments Japonais sur la map en Afrique) donc ça doit bien servir à tester également...
 
 ![Playground - Jeeps](assets/playground-jeeps.jpg)
 
@@ -299,4 +301,4 @@ Je me dis que pour avoir réussi à passer autant de temps et d'énergie à tord
 
 ## Références
 
-
+- Convertisseur float -> hex : https://gregstoll.com/~gregstoll/floattohex/
