@@ -3,7 +3,7 @@ title: Conversion d'un modèle .M2 vers .STL
 description: Conversion d'un modèle 3D .M2 de World of Warcraft vers le format imprimable .STL
 ---
 
-<img src="./assets/m2_stl.png" style="height: 300px"/>
+<img src="./assets/_m2_stl.png" style="height: 300px"/>
 
 # Conversion d'un modèle .M2 vers .STL
 

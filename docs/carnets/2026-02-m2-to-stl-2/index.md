@@ -3,5 +3,5 @@
 En cours
 :::
 
-<img src="./assets/m2_stl.png" style="height: 300px"/>
+<img src="./assets/_m2_stl.png" style="height: 300px"/>
 

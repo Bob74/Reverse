@@ -8,6 +8,9 @@ description: On joue avec la mémoire du jeu et on explore en dehors des limites
 En cours
 :::
 
+<img src="./assets/_fishing.png" style="height: 300px"/>
+
+> "On va avoir besoin d'un plus gros bateau."
 
 # Bidouilles sur Call of the Wild - The Angler
 

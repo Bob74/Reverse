@@ -9,7 +9,7 @@ description: Modifier le relief du terrain depuis la mémoire du jeu pour voir s
 Cette revue est écrite bien des années après sa réalisation, il me manque donc beaucoup d'éléments comme la démarche exacte et tous les logiciels utilisés à l'époque.
 :::
 
-<img src="./assets/flatten.png" style="height: 300px"/>
+<img src="./assets/_flatten.png" style="height: 300px"/>
 
 > "🎵 Ça plane pour moi..."
 
