@@ -3,11 +3,6 @@ title: Bidouilles sur Call of the Wild - The Angler
 description: On joue avec la mémoire du jeu et on explore en dehors des limites
 ---
 
-
-::: danger WIP
-En cours
-:::
-
 <img src="./assets/_fishing.png" style="height: 300px"/>
 
 > "On va avoir besoin d'un plus gros bateau."
@@ -19,7 +14,7 @@ En cours
 - Date : Juin 2024
 - Programme : Call of the Wild - The Angler
 - Version : Epic Games Store (numéro de version exact inconnu)
-- Outils utilisés : [Cheat Engine](../../outils/memory-editors/index.md), [Deca](https://github.com/kk49/deca) (b595)
+- Outils utilisés : [Cheat Engine](../../outils/memory-editors/index.md), [ReClass.NET](../../outils/memory-editors/index.md), [Deca](https://github.com/kk49/deca) (b595)
 
 ## Objectif
 
@@ -113,18 +108,153 @@ Après c'est une supposition, je peux tout à fait me tromper mais pour moi soit
 :::
 
 
+Maintenant qu'on a ces valeurs, **comment les retrouver en mémoire** ? C'est vrai ça, ce n'est pas comme pour le timer qui défilait tout seul et changeait de valeur. Là ces valeurs, ce sont des paramètres qui ne bougent jamais. 
 
+On va procéder différemment : rechercher une suite de valeurs qui sont contigus en mémoire.
 
+On va chercher à retrouver la séquence suivante :
+`1.50 1.50 15.0` `3.0 3.0 30.0` (donc les `WalkParameters` suivi des `JogParameters`)
 
-::: danger WIP
-RAF : Expliquer la recherche de la structure en mémoire
+::: tip
+On pourrait pousser jusqu'à mettre toute les valeurs de la structure retrouvée dans `decaGUI` mais on va y aller doucement quitte à trouver trop de résultats.
+
+Le risque ici est de ne trouver aucun résultats car le fichier extrait n'est peut être pas une représentation exacte de ce qui se trouve en mémoire, peut être qu'il y a des données ou padding entre les sections, etc. Dans l'idée il vaudrait même mieux commencer par une seule section (comme `WalkParameters`) mais pour avoir déjà testé, je sais que Walk + Jog vont fonctionner.
 :::
 
+On va utiliser la recherche par tableau d'octets (`Array of byte`) pour rechercher nos valeurs. Mais pour ça il va falloir transformer nos nombres à virgule normaux en nombre à virgule **hexadécimaux**.
+
+Il existe plein d'outils pour ça, j'utiliserai celui de [gregstoll.com](https://gregstoll.com/~gregstoll/floattohex/) qui va très bien.
+
+Petite configuration :
+- On n'a pas besoin des détails de calculs donc on décoche `Show details` (c'est optionnel)
+- On coche `Swap to use big-endian` (c'est **obligatoire**)
+
+![Conversion de float](assets/float-hex-1.png)
+
+:::: info
+Petit aparté sur la notion de `big-endian`. Il s'agit de l'ordre dans lequel ce qui compose une valeur est écrit en mémoire.
+
+Concrètement, pour le nombre `1.50` :
+- Représentation hexadécimale `little-endian` : `0x3fc00000` (Le bit de poids fort est situé à l'octet avec l'adresse mémoire la plus petite, `3f` prend le tout premier octet)
+- Représentation hexadécimale `big-endian` : `0x0000c03f` (Le bit de poids fort est situé à l'octet avec l'adresse mémoire la plus élevée, `3f` prend le tout dernier octet)
+
+Et en mémoire, en recherche par octets, la donnée est représentée en `big-endian`.
+
+::: info Pour aller un peu plus loin
+Une grande partie des OS x86/x64 connus (dont Windows, Linux ou Mac OS X) sont en `little-endian`. **MAIS** pour autant, le stockage des float en mémoire reste sous *la forme* `big-endian`. C'est la norme *IEEE 754* qui définie cette convention d'écriture pour les floats.
+
+C'est pour ça que même sur un OS little endian, on va devoir rechercher le float sous sa forme big endian.
+:::
+
+::::
 
 
+Du coup, faisons notre petite conversion :
 
+| float | hexadécimal |
+| ----- | ----------- |
+| 1.50  | `0000c03f`  |
+| 1.50  | `0000c03f`  |
+| 15.0  | `00007041`  |
+| 3.00  | `00004040`  |
+| 3.00  | `00004040`  |
+| 30.0  | `0000f041`  |
 
+On met tout bout-à-bout et on peut faire notre recherche par tableau d'octets dans Cheat Engine : `0000c03f0000c03f0000704100004040000040400000f041`
 
+![Cheat Engine recherche par tableau d'octets](assets/ce-search-locomotion.png)
+
+Une seule valeur ressort ici, j'ai constaté qu'habituellement j'en avais plutôt 2. Il faudra les tester pour savoir laquelle fonctionne vraiment.
+
+Maintenant il faut comprendre que l'adresse trouvée est l'adresse du début de la structure `locomotion` que nous avons vu dans les fichiers du jeu tout à l'heure. Ce qui veut dire qu'avec l'adresse trouvée chez moi ça va donner :
+
+| Adresse     | Valeur | Description            |
+| ----------- | ------ | ---------------------- |
+| 20261F3BB**60** | 1.50   | Walk MaxLinearSpeedMPS |
+| 20261F3BB**64** | 1.50   | Walk MaxStrafeSpeedMPS |
+| 20261F3BB**68** | 15.0   | Jog MaxLinearSpeedMPS  |
+| 20261F3BB**6C** | 3.00   | Jog MaxStrafeSpeedMPS  |
+| 20261F3BB**70** | 3.00   | Run MaxLinearSpeedMPS  |
+| 20261F3BB**74** | 30.0   | Run MaxStrafeSpeedMPS  |
+
+> Rappelez-vous qu'un float prend 4 octets en mémoire, on doit incrémenter de 4 par 4 pour aller de valeur en valeur (4, 8, C, 10, 14, 18, 1C, 20...)
+
+Un logiciel pratique pour visualiser une structure de ce genre : [ReClass.NET](../../outils/memory-editors/index.md)
+
+On s'attache au processus (comme avec Cheat Engine) :
+
+![ReClass.NET ouverture process](assets/reclass-1.png)
+
+On entre l'adresse trouvée dans Cheat Engine dans la structure par défaut de ReClass :
+
+![ReClass.NET structure adresse](assets/reclass-2.png)
+
+On va ajouter des octets supplémentaires pour être sûr de visualiser toutes les valeurs de la structure `locomotion` (ici j'en ajoute 64, c'est trop mais pas gênant) :
+
+![ReClass.NET ajouter bytes](assets/reclass-3.png)
+
+Comme on a vu que notre structure ne contient que des float, on se permet de définir le type de toutes les valeurs à afficher sur float :
+- Sélectionner toutes les lignes (1 ligne = 1 valeur lue en mémoire)
+- Clic droit -> `Change Type`
+- `Float`
+
+![ReClass.NET affichage en floats](assets/reclass-4.png)
+
+Et on se retrouve avec un affichage de toute la structure avec les valeurs actuellement en mémoire :
+
+![ReClass.NET vue finale](assets/reclass-5.png)
+
+> Là on voit bien que toutes les valeurs se suivent parfaitement, on n'aura pas de mal à naviguer dans celles-ci depuis une adresse parent de base.
+
+::: warning Malheureusement...
+Je n'ai pas encore trouvé comment obtenir un pointer vers cette structure... Il faudra donc relancer la recherche à chaque lancement du jeu mais on va quand même tâcher de se simplifier la vie autant que possible dans Cheat Engine.
+:::
+
+Créons un entête **avec adresse** dans Cheat Engine en faisant clic droit -> `Create Header` dans la liste des adresses :
+
+![Create header](assets/ce-create-header.png)
+
+De mon côté je le nommerai **Locomotion** suivi de la suite d'octets à rechercher. Comme ça lorsque je relancerai le jeu, je referai ma recherche en tableau d'octets en recopiant cette valeur. Je l'aurai sous la main au lieu de me retaper les conversions de floats.
+
+On accepte de donner une adresse au header (c'est là tout l'intérêt en fait) :
+
+![Address support](assets/ce-create-header-2.png)
+
+De base l'adresse est à 00000000, on double clic sur l'adresse pour la définir :
+
+![Header address](assets/ce-create-header-3.png)
+
+On lui donne l'adresse de la structure trouvée précédemment via la recherche de tableau d'octets (le type n'a aucune importance ici) :
+
+![Header address](assets/ce-create-header-4.png)
+
+::: tip
+Le header nous permet de créer un groupe dont toutes les adresses qui y figurerons pourront dépendre d'une adresse parent.
+
+Concrètement on donne au header l'adresse parent et on se contente de donner un offset (`+4`, `+8`) aux adresses enfants.
+:::
+
+Ajoutons une nouvelle adresse et cette fois-ci, on va seulement indiquer `+0` dans `Address` :
+
+![Première adresse du groupe](assets/ce-locomotion-walk-linear.png)
+
+> Pourquoi `+0` ? Car la structure commence à 0 avec la valeur de **Walk MaxLinearSpeedMPS**. Donc notre adresse parent du groupe est aussi notre première adresse utile.
+
+On glisse ensuite notre nouvelle adresse dans le groupe avec un glisser-déposer :
+
+![Déplacement dans le groupe](assets/ce-locomotion-walk-linear-2.png)
+
+On contrôle que l'adresse est bien placée. Visuellement elle doit être décalée sous le header et elle doit prendre sa valeur de `1.50`.
+
+Pour les adresses suivantes, je me contente de copier/coller celle que l'on vient de déplacer, comme ça les suivantes seront déjà placées ans le groupe, on devra juste changer l'offset et la description :
+
+![Nouvelle adresse de groupe](assets/ce-locomotion-walk-strafe.png)
+
+On continue d'ajouter des adresses de 4 en 4 et petit à petit on arrivera à ça :
+
+![Walk, Jog, Run](assets/ce-locomotion-addresses.png)
+
+On continue ainsi de suite jusqu'à avoir toutes les valeurs qui nous intéressent (on a déjà les vitesses, il faut aussi choper `JumpSpeed` qui est la hauteur de saut si on veut sauter sur cette satanée plateforme).
 
 
 
@@ -305,3 +435,4 @@ Je me dis que pour avoir réussi à passer autant de temps et d'énergie à tord
 ## Références
 
 - Convertisseur float -> hex : https://gregstoll.com/~gregstoll/floattohex/
+- Big/Little endians ("boutisme") : https://fr.wikipedia.org/wiki/Boutisme
