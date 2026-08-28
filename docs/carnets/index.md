@@ -4,7 +4,7 @@
 Je note ici les expériences que j'ai pu faire en essayant de détailler et d'expliquer au mieux comment j'ai procédé. Parfois c'est compliqué, je ne pense pas à noter les choses sur le moment donc il peut manquer pas mal d'infos...
 :::
 
-## Juin 2024 (maj Août 2026) <Badge type="warning" text="En cours d'écriture..." />
+## Juin 2024 (maj Août 2026)
 - [Bidouilles sur **Call of the Wild - The Angler**](./2024-06-the-angler-bidouilles/)
 
 ## Août 2026
